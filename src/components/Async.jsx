@@ -2,11 +2,20 @@ import { useState, useEffect } from 'react';
 
 function Async() {
   const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
 
   const fetchData = async () => {
-    const response = await fetch('https://api.quotable.io/random');
-    const data = await response.json();
-    setData(data);
+    try {
+      const response = await fetch('https://api.quotable.io/random');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      setData(data);
+    } catch (error) {
+      console.log(error);
+      setError(error.toString());
+    }
   };
 
   //   fetchData();
@@ -26,6 +35,8 @@ function Async() {
             <em>&quot;{data.content}&quot;</em>
           </p>
         </div>
+      ) : error ? (
+        <div>Error: {error}</div>
       ) : (
         'Loading...'
       )}
