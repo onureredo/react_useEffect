@@ -1,0 +1,46 @@
+* {
+  background-color: #1b1b1b;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.App {
+  margin: 2rem;
+  padding: 2rem;
+  text-align: center;
+  min-height: 50vh;
+  border-radius: 20px;
+  box-shadow: 2px 2px #4caf50, -0.1em 0.1em 0.4em 0.2em #4caf50;
+}
+
+hr {
+  border-color: #4caf50;
+  margin: 2rem 0 1rem 0;
+}
+
+input {
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px #4caf50, -0.1em 0.1em 0.4em 0.2em #4caf50;
+}
+
+button {
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  margin: 2rem;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 2px 2px #4caf50, -0.1em 0.1em 0.4em 0.2em #4caf50;
+}
+
+button:hover {
+  transition: all 0.15s;
+  opacity: 60%;
+  cursor: pointer;
+  transition: all 0.35s;
+}

@@ -1,7 +1,13 @@
+import Basics from './components/Basics';
+import Fetch from './components/Fetch';
+
 function App() {
   return (
     <>
-      <div>hey</div>
+      <div className='App'>
+        <Basics />
+        <Fetch />
+      </div>
     </>
   );
 }
