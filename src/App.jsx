@@ -1,5 +1,7 @@
 import Basics from './components/Basics';
 import Fetch from './components/Fetch';
+import Axios from './components/Axios';
+import Async from './components/Async';
 
 function App() {
   return (
@@ -7,6 +9,8 @@ function App() {
       <div className='App'>
         <Basics />
         <Fetch />
+        <Axios />
+        <Async />
       </div>
     </>
   );

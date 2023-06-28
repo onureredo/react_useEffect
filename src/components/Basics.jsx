@@ -37,7 +37,7 @@ function Basics() {
 
   return (
     <div>
-      <h1>UseEffect</h1>
+      <h2>useEffect Hook</h2>
       <input
         className='cooltext'
         value={name}

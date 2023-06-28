@@ -44,3 +44,7 @@ button:hover {
   cursor: pointer;
   transition: all 0.35s;
 }
+
+h2 {
+  color: #f5e050;
+}

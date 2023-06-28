@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 
-function Fetch() {
+function Async() {
   const [data, setData] = useState(null);
 
-  const fetchData = () => {
-    fetch('https://api.quotable.io/random')
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error(error));
+  const fetchData = async () => {
+    const response = await fetch('https://api.quotable.io/random');
+    const data = await response.json();
+    setData(data);
   };
 
   //   fetchData();
@@ -19,7 +18,7 @@ function Fetch() {
   return (
     <div className='fetch'>
       <hr />
-      <h2>Fetch</h2>
+      <h2>async await</h2>
       {data ? (
         <div>
           <h3>{data.author}</h3>
@@ -37,4 +36,4 @@ function Fetch() {
   );
 }
 
-export default Fetch;
+export default Async;
